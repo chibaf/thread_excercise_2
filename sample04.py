@@ -7,7 +7,7 @@ def thread1(a,q):
     q.put(ret)
 
 i=1
-q =queue.Queue()
+q =queue.Queue()  # q which stores a result of a thread
 th = threading.Thread(target=thread1, args=(i,q),daemon=True)
 th.start()
 #th.join()
