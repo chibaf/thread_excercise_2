@@ -2,7 +2,7 @@ import threading
 import queue, time
 
 def thread1(a,q):
-    time.sleep(3)
+    time.sleep(1)
     ret = [1,2]
     q.put(ret)
 
@@ -17,6 +17,6 @@ while True:
     print('thread ended')
     break
   print('not end')
-  time.sleep(1)
+  time.sleep(3)
 
 exit()
