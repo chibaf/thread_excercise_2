@@ -17,11 +17,11 @@ while True:
     print(rslt)
     print(str(i)+': thread ended')
     i=i+1
-    if i>10:
+    if i>5:
       break;
     th = threading.Thread(target=thread1, args=(i,q),daemon=True)
     th.start()
-  print('not end')
-  time.sleep(2)
+  print(str(i)+' dose not end')
+  time.sleep(2)  #do other tasks
 
 exit()
