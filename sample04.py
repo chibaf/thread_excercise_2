@@ -13,15 +13,13 @@ th.start()
 #th.join()
 while True:
   if threading.active_count()==1:
-    rslt = q.get()
-    print(rslt)
-    print(str(i)+': thread ended')
+    result = q.get()
+    print("thread: "+str(i)+" "+str(result))
     i=i+1
     if i>5:
       break;
     th = threading.Thread(target=thread1, args=(i,q),daemon=True)
     th.start()
-  print(str(i)+' dose not end')
   time.sleep(2)  #do other tasks
 
 exit()
