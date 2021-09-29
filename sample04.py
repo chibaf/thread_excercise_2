@@ -12,7 +12,7 @@ th = threading.Thread(target=thread1, args=(i,q),daemon=True)
 th.start()
 #th.join()
 while True:
-  if threading.active_count()==1:
+  if th.is_alive()==False:
     result = q.get()
     print("thread: "+str(i)+" "+str(result))
     i=i+1
